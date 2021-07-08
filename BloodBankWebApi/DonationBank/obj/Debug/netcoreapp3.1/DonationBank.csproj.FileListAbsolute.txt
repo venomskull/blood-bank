@@ -127,3 +127,4 @@ C:\DATA\WorkingOuts\React-Core\BloodBank\BloodBankWebApi\DonationBank\obj\Debug\
 C:\DATA\WorkingOuts\React-Core\BloodBank\BloodBankWebApi\DonationBank\obj\Debug\netcoreapp3.1\DonationBank.dll
 C:\DATA\WorkingOuts\React-Core\BloodBank\BloodBankWebApi\DonationBank\obj\Debug\netcoreapp3.1\DonationBank.pdb
 C:\DATA\WorkingOuts\React-Core\BloodBank\BloodBankWebApi\DonationBank\obj\Debug\netcoreapp3.1\DonationBank.genruntimeconfig.cache
+C:\DATA\WorkingOuts\React-Core\BloodBank\BloodBankWebApi\DonationBank\obj\Debug\netcoreapp3.1\DonationBank.csproj.AssemblyReference.cache

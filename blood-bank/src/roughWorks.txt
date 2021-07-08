@@ -1,0 +1,33 @@
+App Structure
+-------------
+
+● src
++---● actions
+|   |
+|   |-- api.js (handle all http request)
+|   |-- dCandidate.js (Redux actions & action creators) 
+|   |-- store.js (configure redux store)
+|
++---● components
+|   |
+|   |--DCandidateForm.js (form operations) - child
+|   |--DCandidates.js  (list of records) - parent
+|   |--useForm.js (handles common form opearations)
+|
+|---● reducers
+|   |
+|   |--dCandidate.js
+|   |--index.js
+|
+|-- App.js
+|-- index.js
+|-- index.css
+
+
+install - redux, react-redux, redux-thunk
+
+actions - it is an object having the operations create, update, delete etc, along with the data which is to be deleted or updated
+reducers - action object is passed to the reducers. inside the reducres we will modify the data to get updated inside the store
+store - stores all of the records in a state
+
+cmpnt -> dispatch(action) -> reducer -> cmpnt

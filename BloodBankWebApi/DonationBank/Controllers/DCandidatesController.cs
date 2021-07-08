@@ -47,11 +47,7 @@ namespace DonationBank.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutDCandidate(int id, DCandidate dCandidate)
         {
-            if (id != dCandidate.Id)
-            {
-                return BadRequest();
-            }
-
+            dCandidate.Id = id;
             _context.Entry(dCandidate).State = EntityState.Modified;
 
             try

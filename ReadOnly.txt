@@ -1,0 +1,49 @@
+(Tools --> NuGet Package Manager --> Package Manager Console)
+Add-Migration "InitialCreate"
+Update-Database
+
+
+
+"ConnectionStrings": {
+    "DevConnection": "Server=DEEPAC-PC; Database=DonationDB; Trusted_Connection=True; MultipleActiveResultSets=True;"
+  }
+
+
+services.AddDbContext<DonationDBContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("DevConnection")));
+
+
+public class DCandidate
+    {
+        [Key]
+        public int id { get; set; }
+
+        [Column(TypeName="nvarchar(100)")]
+        public string fullName { get; set; }
+
+        [Column(TypeName ="nvarchar(100)")]
+        public string mobile { get; set; }
+
+        [Column(TypeName ="nvarchar(100)")]
+        public string email { get; set; }
+
+        public int age { get; set; }
+
+        [Column(TypeName ="nvarchar(3)")]
+        public string bloodGroup { get; set; }
+
+        [Column(TypeName ="nvarchar(100)")]
+        public string address { get; set; }
+    }
+
+
+public class DonationDBContext:DbContext
+    {
+        public DonationDBContext(DbContextOptions<DonationDBContext> options):base(options)
+        {
+
+        }
+
+        public DbSet<DCandidate> DCandidates { get; set; }
+    }
+}

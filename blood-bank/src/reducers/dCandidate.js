@@ -1,15 +1,15 @@
 import { ACTION_TYPES } from "../actions/dCandidate";
 
 const initialState = {
-    list: [],
+    list: []
 }
 
 export const dCandidate = (state = initialState, action) => {
-    switch (ACTION_TYPES) {
+    switch (action.type) {
         case ACTION_TYPES.FETCH_ALL:
             return {
                 ...state,
-                list: [action.payload]
+                list: [...action.payload]
             }
         default:
             return state;
